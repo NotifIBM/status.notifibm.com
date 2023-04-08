@@ -100,11 +100,11 @@ export async function processCronTrigger(event) {
     }
 
     //send a tweet
-    if(
-      monitorStatusChanged
-    ){
-      event.waitUntil(notifyTwitter(monitor, monitorOperational))
-    }
+    // if(
+    //   monitorStatusChanged
+    // ){
+    //   event.waitUntil(notifyTwitter(monitor, monitorOperational))
+    // }
 
     // make sure checkDay exists in checks in cases when needed
     if (

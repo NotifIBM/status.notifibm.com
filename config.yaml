@@ -1,10 +1,10 @@
 settings:
   title: 'Status Page'
-  url: 'https://status.supunsathsara.com' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
+  url: 'https://status.notifibm.com' # used for Slack messages
+  logo: android-chrome-512x512.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
-  twitterHashtag: 'supunsathsara.com'
+  twitterHashtag: 'NotifIBM'
   allmonitorsOperational: 'All Systems Operational'
   notAllmonitorsOperational: 'Not All Systems Operational'
   monitorLabelOperational: 'Operational'
@@ -15,35 +15,20 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: supunsathsara-com # unique identifier
-    name: supunsathsara.com
-    description: 'Personal Website.' # default=empty
-    url: 'https://supunsathsara.com' # URL to fetch
+  - id: notifibm-com # unique identifier
+    name: notifibm.com
+    description: 'Main Website.' # default=empty
+    url: 'https://notifibm.com' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-supunsathsara-com # unique identifier
+  - id: blog-notifibm-com # unique identifier
     name: blog.supunsathsara.com
-    description: 'Blog Site.'
-    url: 'https://blog.supunsathsara.com'
+    description: 'Blog.'
+    url: 'https://blog.notifibm.com'
     method: GET 
     expectStatus: 200 # operational status, default=200
-    followRedirect: false 
+    followRedirect: true
     linkable: true 
-
-  - id: bio-supunsathsara-com
-    name: bio.supunsathsara.com
-    description: 'Contact Details.'
-    url: 'https://bio.supunsathsara.com'
-    method: GET
-    expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
-
-  - id: github-io
-    name: supunsathsara.github.io
-    url: 'https://supunsathsara.github.io'
-    method: GET
-    expectStatus: 200
-    linkable: true

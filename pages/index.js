@@ -46,6 +46,16 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
       <Head>
         <title>{config.settings.title}</title>
         <link rel="stylesheet" href="./style.css" />
+        <link
+          href="favicon-black.ico"
+          rel="icon"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          href="favicon-white.ico"
+          rel="icon"
+          media="(prefers-color-scheme: dark)"
+        />
         <script>
           {`
           function setTheme(theme) {
@@ -101,10 +111,10 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
           </div>
           <div>
             <a
-              href="https://supunsathsara.com"
+              href="https://notifibm.com"
               target="_blank"
             >
-              &copy; supunsathsara.com
+              &copy; NotifIBM
             </a>
           </div>
         </div>
