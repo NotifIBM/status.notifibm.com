@@ -61,9 +61,9 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
           function setTheme(theme) {
             const logoImg = document.querySelector('.logo-img');
             if (theme === 'dark') {
-              logoImg.src = { config.settings.logo + '-white.png'};
+              logoImg.src = config.settings.logo + '-white.png';
             } else {
-              logoImg.src = {config.settings.logo + '-black.png'};
+              logoImg.src = config.settings.logo + '-black.png';
             }
             document.documentElement.classList.remove("dark", "light")
             document.documentElement.classList.add(theme)
