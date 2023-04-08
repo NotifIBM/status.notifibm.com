@@ -59,6 +59,12 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
         <script>
           {`
           function setTheme(theme) {
+            const logoImg = document.querySelector('.logo-img');
+            if (theme === 'dark') {
+              logoImg.src = { config.settings.logo + '-white.png'};
+            } else {
+              logoImg.src = {config.settings.logo + '-black.png'};
+            }
             document.documentElement.classList.remove("dark", "light")
             document.documentElement.classList.add(theme)
             localStorage.theme = theme
@@ -80,7 +86,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
       <div className="container mx-auto px-4">
         <div className="flex flex-row justify-between items-center p-4">
           <div className="flex flex-row items-center">
-            <img className="h-8 w-auto" src={config.settings.logo} />
+            <img className="h-8 w-auto logo-img" src={config.settings.logo+".png"} />
             <h1 className="ml-4 text-3xl">{config.settings.title}</h1>
           </div>
           <div className="flex flex-row items-center">
