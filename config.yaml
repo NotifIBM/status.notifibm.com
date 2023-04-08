@@ -1,7 +1,7 @@
 settings:
   title: 'NotifIBM'
   url: 'https://status.notifibm.com' # used for Slack messages
-  logo: android-chrome-512x512 # image in ./public/ folder
+  logo: android-chrome-512x512.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
   twitterHashtag: 'NotifIBM'
