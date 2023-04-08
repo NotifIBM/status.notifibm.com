@@ -1,5 +1,5 @@
 settings:
-  title: 'Status Page'
+  title: 'NotifIBM'
   url: 'https://status.notifibm.com' # used for Slack messages
   logo: android-chrome-512x512.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
@@ -25,7 +25,7 @@ monitors:
     linkable: true # allows the title to be a link, default=true
 
   - id: blog-notifibm-com # unique identifier
-    name: blog.supunsathsara.com
+    name: blog.notifibm.com
     description: 'Blog.'
     url: 'https://blog.notifibm.com'
     method: GET 

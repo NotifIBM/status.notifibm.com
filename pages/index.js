@@ -44,7 +44,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
   return (
     <div className="min-h-screen">
       <Head>
-        <title>{config.settings.title}</title>
+        <title>{config.settings.title} Status</title>
         <link rel="stylesheet" href="./style.css" />
         <link
           href="favicon-black.ico"
