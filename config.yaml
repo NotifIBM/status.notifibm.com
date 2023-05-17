@@ -1,34 +1,43 @@
 settings:
-  title: 'NotifIBM'
-  url: 'https://status.notifibm.com' # used for Slack messages
+  title: "NotifIBM"
+  url: "https://status.notifibm.com" # used for Slack messages
   logo: android-chrome-512x512.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
-  twitterHashtag: 'NotifIBM'
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  twitterHashtag: "NotifIBM"
+  allmonitorsOperational: "All Systems Operational"
+  notAllmonitorsOperational: "Not All Systems Operational"
+  monitorLabelOperational: "Operational"
+  monitorLabelNotOperational: "Not Operational"
+  monitorLabelNoData: "No data"
+  dayInHistogramNoData: "No data"
+  dayInHistogramOperational: "All good"
+  dayInHistogramNotOperational: " incident(s)" # xx incident(s) recorded
 
 monitors:
   - id: notifibm-com # unique identifier
     name: notifibm.com
-    description: 'Main Website.' # default=empty
-    url: 'https://notifibm.com' # URL to fetch
+    description: "Main Website." # default=empty
+    url: "https://notifibm.com" # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-notifibm-com # unique identifier
-    name: blog.notifibm.com
-    description: 'Blog.'
-    url: 'https://blog.notifibm.com'
-    method: GET 
+  - id: app-notifibm-com # unique identifier
+    name: app.notifibm.com
+    description: "Dashboard"
+    url: "https://app.notifibm.com"
+    method: GET
     expectStatus: 200 # operational status, default=200
     followRedirect: true
-    linkable: true 
+    linkable: true
+
+  - id: blog-notifibm-com # unique identifier
+    name: blog.notifibm.com
+    description: "Blog."
+    url: "https://blog.notifibm.com"
+    method: GET
+    expectStatus: 200 # operational status, default=200
+    followRedirect: true
+    linkable: true
